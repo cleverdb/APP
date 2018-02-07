@@ -1,0 +1,34 @@
+<view class="trump">
+
+    <view class="title">
+        {{title}}
+    </view>
+
+
+    <view class="content">
+        <swiper indicator-dots="true" class="Bannerswiper" bindchange="changeSwiper" >
+            <block wx:for="{{trumpArr}}" wx:key="name">
+                <swiper-item>
+                    <view class="swiper-item">
+                        <navigator url="../Play/play?name={{item.name}}">
+                            <view class="">
+                                <image mode='widthFix' src="{{item.url}}" />
+                                <view class="contMess">
+                                    <text class="Mess1">{{item.name}}</text>
+                                    <text class="Mess2">{{item.desc}}</text>
+                                </view>
+                            </view>
+                        </navigator>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</view>
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+  <block wx:for="{{actionSheetItems}}">
+    <action-sheet-item class="item">{{item}}</action-sheet-item>
+  </block>
+  <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>

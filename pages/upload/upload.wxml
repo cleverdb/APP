@@ -1,0 +1,7 @@
+<view class = "upload">
+  <view class='upload-image'  wx:for="{{readyUploadFiles}}" wx:key="{{index}}">
+    <image style = "width:320rpx;height:240rpx" mode='aspectFit'  src="{{item}}"></image>
+  </view>
+</view>
+ 
+

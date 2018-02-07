@@ -1,0 +1,21 @@
+<import src = "/pages/common/pageFooter"/>
+
+
+
+<view class='content'>
+<button>2313123123</button>
+<button>2313123123</button>
+<button>2313123123</button>
+<button>2313123123</button>
+<button>2313123123</button>
+<button>2313123123</button>
+<button>2313123123</button>
+<button>2313123123</button>
+<button>2313123123</button>
+
+
+</view>
+
+<view>
+<template is="footer"/>
+</view>

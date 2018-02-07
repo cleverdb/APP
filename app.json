@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/you/you",
+    "pages/love/love",
+    "pages/me/me",
+    "pages/logs/logs",
+    "pages/upload/upload"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "celverdb",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "selectedColor": "#17d96c",
+    "list": [
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "pages/images/me.png",
+        "text": "我",
+        "selectedIconPath": "pages/images/me.png"
+      },
+      {
+        "pagePath": "pages/love/love",
+        "text": "love",
+        "iconPath": "pages/images/love.png",
+        "selectedIconPath": "pages/images/love.png"
+      },
+      {
+        "pagePath": "pages/you/you",
+        "text": "你",
+        "iconPath": "pages/images/you.png",
+        "selectedIconPath": "pages/images/you.png"
+      }
+    ]
+  }
+}
