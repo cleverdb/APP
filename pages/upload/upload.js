@@ -1,19 +1,23 @@
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    readyUploadFiles:[]
+    readyUploadFiles:[],
+    imgAreaHeight:195,
+    flag:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var readyUploadFiles = options.tempFilePaths.split(",");
+    var files = options.tempFilePaths.split(",");
     this.setData({
-      readyUploadFiles: readyUploadFiles
+      readyUploadFiles: files,
+      flag: files.length==9
     })
     
   },
@@ -65,5 +69,49 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  
+  formSubmit:function(res){
+    console.log(res)
+  },
+
+  formReset:function(){
+
+  },
+  addImage:function(){
+    var that = this;
+    wx.chooseImage({
+      count: 9, // 默认9
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success: function (res) {
+        console.log(res)
+        
+        var temp = that.data.readyUploadFiles;
+        res.tempFilePaths.map(arr => {
+          temp.push(arr);
+        })
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        that.setData({
+          readyUploadFiles: temp,
+          flag: temp.length == 9,
+        })
+      }
+    })
+  },
+  previewImage:function(){
+    var that = this;
+    wx.previewImage({
+    current: '',
+    urls: that.data.readyUploadFiles,
+    success: function(res) {
+      console.log(res);
+    },
+    fail: function(res) {},
+    complete: function(res) {},
+  })
+  },
+  deleteImg:function(){
+    console.log("delete");
   }
 })

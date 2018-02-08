@@ -6,7 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    readyUploadFiles: ["/pages/images/bg.png", "/pages/images/home.png", 
+                        "/pages/images/love.png", "/pages/images/you.png",
+                        "/pages/images/me.png"],
+    imgAreaHeight: 195,
+    flag: false
   },
 
   /**

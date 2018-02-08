@@ -1,6 +1,6 @@
 <template name="footer">
 <view class = 'footer'>
-  <button  bindtap = 'uploadImage'><image  src='/pages/images/home.png'></image></button>
+  <image bindtap='uploadImage' src='/pages/images/home.png'></image>
   <image  flex='1' src='/pages/images/home.png'></image>
   <image  flex='1' src='/pages/images/home.png'></image>
 </view>
