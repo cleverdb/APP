@@ -1,0 +1,12 @@
+<!--pages/picdetial.wxml-->
+<view>
+  <view class='photo'>
+  
+  </view>
+  <view class='describe'>
+  
+  </view>
+  <view class='comments'>
+  
+  </view>
+</view>

@@ -10,8 +10,6 @@ Page({
     
   },
   onLoad: function () {
-  debugger
-    console.log(wx.getStorageSync('userId'))
     this.setData({
     }); 
   },

@@ -4,7 +4,8 @@
     "pages/you/you",
     "pages/me/me",
     "pages/logs/logs",
-    "pages/upload/upload"
+    "pages/upload/upload",
+    "pages/picdetial/picdetial"
   ],
   "window": {
     "backgroundTextStyle": "light",

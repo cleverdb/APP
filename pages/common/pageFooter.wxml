@@ -2,7 +2,7 @@
 <view class = 'footer'>
   <image bindtap='uploadImage' src='/pages/images/home.png'></image>
   <image  flex='1' src='/pages/images/home.png'></image>
-  <image  flex='1' src='/pages/images/home.png'></image>
+  <image  bindtap='testApi' flex='1' src='/pages/images/home.png'></image>
 </view>
 
 </template>

@@ -110,8 +110,5 @@ Page({
     fail: function(res) {},
     complete: function(res) {},
   })
-  },
-  deleteImg:function(){
-    console.log("delete");
   }
 })

@@ -5,13 +5,10 @@
  <view class = "upload">
   <view class='img-area' style='height:{{imgAreaHeight}}rpx'>
   
-    <view class='upload-image' wx:for="{{readyUploadFiles}}" wx:key="{{index}}" bindtap='previewImage'>
-      <image  style = "width:175rpx;height:175rpx" mode='aspectFit'  src="{{item}}"></image>
-      <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></view>
+    <view class='upload-image' wx:for="{{photos}}" wx:key="{{id}}" bindtap='photodetial' data-url="{{item.url}}" >
+      <image  style = "width:175rpx;height:175rpx" mode='aspectFit'  src="{{item.url}}" ></image>
+      <view class="delete-btn" data-index="{{item.id}}"></view>
     </view>
-    <view class='upload-image' wx:if="{{!flag}}" >
-      <image bindtap='addImage' style = "width:175rpx;height:175rpx" mode='aspectFit'  src="/pages/images/home.png"></image>
-    </view> 
   </view>
 </view>
 

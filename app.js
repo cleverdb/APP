@@ -1,5 +1,10 @@
 //app.js
 App({
+
+  data:{
+    appid: 'wx1560a57a16311b28',
+    appsecret: '6454674b9858b21834ae4bdf9d2204d7'
+  },
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -10,7 +15,16 @@ App({
     wx.login({
       success: res => {
         console.log(res);
+        let code = res.code;
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        wx.request({
+          url: 'https://api.weixin.qq.com/sns/jscode2session?appid=wx1560a57a16311b28&secret=6454674b9858b21834ae4bdf9d2204d7&js_code=' + code+'&grant_type=authorization_code',
+          success: res =>{
+            debugger;
+            console.log(res)
+          }
+        })
+        
       }
     })
     // 获取用户信息

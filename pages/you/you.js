@@ -6,9 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    readyUploadFiles: ["/pages/images/bg.png", "/pages/images/home.png", 
-                        "/pages/images/love.png", "/pages/images/you.png",
-                        "/pages/images/me.png"],
+    photos: [{ 'id': '1', 'url':'/pages/images/bg.png'},
+                       { 'id': '2', 'url': '/pages/images/home.png' },
+                       { 'id': '3', 'url': '/pages/images/love.png' },
+                       { 'id': '4', 'url': '/pages/images/you.png' },
+                       { 'id': '5', 'url': '/pages/images/me.png' }],
     imgAreaHeight: 195,
     flag: false
   },
@@ -69,6 +71,39 @@ Page({
     
   },
   uploadImage:function(){
+
     pageFooter.uploadImage()
+
+  },
+  testApi:function(){
+    wx.request({
+      url: 'http://172.22.34.34/classes', //仅为示例，并非真实的接口地址
+      method:'get',
+      data: {
+        'st':'wx'
+      },
+      dataType:'json',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+      }
+    })
+  },
+  photodetial: function(e){
+    
+   wx.previewImage({
+     urls: ["/pages/images/love.png", "/pages/images/love.png"],
+     success: function (res) {
+       console.log(res);
+     },
+     fail: function (res) {
+       console.log(res);
+      },
+     complete: function (res) { 
+       console.log(res);
+     },
+   })
   }
 })

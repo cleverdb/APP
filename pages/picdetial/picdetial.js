@@ -1,24 +1,13 @@
-// pages/me/me.js
+// pages/picdetial.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      title: '我的最爱',
-      loading: false,
-      loadtxt: '正在加载',
-      bg: '',
-      trumpArr: [
-        { 'url': '/pages/images/bg.png', 'desc': 'test1', 'name':'test1'}, 
-        { 'url': '/pages/images/bg.png', 'desc': 'test1', 'name': 'test2' },  
-        { 'url': '/pages/images/bg.png', 'desc': 'test1', 'name': 'test3' }
-      ],
-      actionSheetItems:[
-        '添加','删除','修改'
-      ],
-      actionSheetHidden:true
-
+    photoUrl:null,
+    describe:null,
+    comments:[]
   },
 
   /**
@@ -26,6 +15,7 @@ Page({
    */
   onLoad: function (options) {
   
+
   },
 
   /**
@@ -75,10 +65,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  testSheet:function(){
-    this.setData({
-      actionSheetHidden: false
-    })
   }
 })
