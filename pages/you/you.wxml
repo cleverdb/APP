@@ -5,7 +5,7 @@
  <view class = "upload">
   <view class='img-area' style='height:{{imgAreaHeight}}rpx'>
   
-    <view class='upload-image' wx:for="{{photos}}" wx:key="{{id}}" bindtap='photodetial' data-url="{{item.url}}" >
+    <view class='upload-image' wx:for="{{photos}}" wx:key="{{id}}" bindtap='photodetial' data-url="{{item.url}}" data-id="{{item.id}}" >
       <image  style = "width:175rpx;height:175rpx" mode='aspectFit'  src="{{item.url}}" ></image>
       <view class="delete-btn" data-index="{{item.id}}"></view>
     </view>

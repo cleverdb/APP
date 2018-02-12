@@ -1,4 +1,5 @@
 
+var app = getApp();
 Page({
 
   /**
@@ -7,6 +8,7 @@ Page({
   data: {
     readyUploadFiles:[],
     imgAreaHeight:195,
+    url: app.data.domain +"/clothes",
     flag:false
   },
 
@@ -110,5 +112,57 @@ Page({
     fail: function(res) {},
     complete: function(res) {},
   })
+  },
+  formSubmit:function(e){
+    var _this = this;
+    let content = e.detail.value['photoDesc'];
+    let filePaths = _this.data.readyUploadFiles;
+    filePaths.map(path => {
+      _this.uploadSinglePhoto(path, content);
+    })
+   wx.switchTab({
+     url: '../you/you',
+   })
+  var promise = Promise.all(
+     filePaths.map((file, index) =>{
+       return new Promise((resolve, reject) => {
+         wx.uploadFile({
+           url: _this.data.url,
+           filePath: photoPath,
+           name: 'files',
+           formData: {
+             'content': content,
+             'st': 'wx'
+           },
+           success: res => {
+             resolve(res);
+           },
+           fail: res => {
+             resolve(res)
+           }
+         })
+       })
+     })
+   )
+  promise.then();
+  promise.catch();
+  },
+  uploadSinglePhoto:function(photoPath,content){
+    var _this = this;
+    wx.uploadFile({
+      url: _this.data.url,
+      filePath: photoPath,
+      name: 'files',
+      formData: {
+        'content': content,
+        'st': 'wx'
+      },
+      success: res => {
+
+      },
+      fail: res => {
+
+      }
+    })
   }
 })

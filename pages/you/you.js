@@ -6,11 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    photos: [{ 'id': '1', 'url':'/pages/images/bg.png'},
-                       { 'id': '2', 'url': '/pages/images/home.png' },
-                       { 'id': '3', 'url': '/pages/images/love.png' },
-                       { 'id': '4', 'url': '/pages/images/you.png' },
-                       { 'id': '5', 'url': '/pages/images/me.png' }],
+    photos: [{ 'id': '1', 'url':'https://bpic.588ku.com/back_pic/05/28/56/185a0a68bb36de4.jpg!/fw/320/quality/90/unsharp/true/compress/true'},
+      { 'id': '2', 'url': 'https://bpic.588ku.com/back_pic/05/28/56/185a0a68bb36de4.jpg!/fw/320/quality/90/unsharp/true/compress/true' },
+      { 'id': '3', 'url': 'https://bpic.588ku.com/back_pic/05/28/56/185a0a68bb36de4.jpg!/fw/320/quality/90/unsharp/true/compress/true' },
+      { 'id': '4', 'url': 'https://bpic.588ku.com/back_pic/05/28/56/185a0a68bb36de4.jpg!/fw/320/quality/90/unsharp/true/compress/true' },
+      { 'id': '5', 'url': 'https://bpic.588ku.com/back_pic/05/28/56/185a0a68bb36de4.jpg!/fw/320/quality/90/unsharp/true/compress/true' }],
     imgAreaHeight: 195,
     flag: false
   },
@@ -19,7 +19,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    let files = options.newPhoto;
+    console.log(files);
   },
 
   /**
@@ -92,18 +93,9 @@ Page({
     })
   },
   photodetial: function(e){
-    
-   wx.previewImage({
-     urls: ["/pages/images/love.png", "/pages/images/love.png"],
-     success: function (res) {
-       console.log(res);
-     },
-     fail: function (res) {
-       console.log(res);
-      },
-     complete: function (res) { 
-       console.log(res);
-     },
-   })
+    let photoId = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '/pages/picdetial/picdetial?id=' + photoId,
+    })
   }
 })

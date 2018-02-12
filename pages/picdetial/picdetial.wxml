@@ -1,12 +1,104 @@
 <!--pages/picdetial.wxml-->
-<view>
-  <view class='photo'>
-  
+<view  >
+  <view >
+    <image mode='aspectFit' src="https://bpic.588ku.com/back_pic/05/28/56/185a0a68bb36de4.jpg!/fw/320/quality/90/unsharp/true/compress/true"></image>
   </view>
+ 
   <view class='describe'>
-  
+    <text >这是一张新年快乐图，充满中国元素.如果您不希望选择任意的后代元素，而是希望缩小范围，只选择某个元素的子元素，请使用子元素选择器（Child selector）。
+
+例如，如果您希望选择只作为 h1 元素子元素的 strong 元素，可以这样写</text>
   </view>
-  <view class='comments'>
-  
+  <view>
+    <text style='font-size:20rpx'>-------评论.留言-------</text>
   </view>
-</view>
+  <view >
+    <view  class='comments' >
+      <view class='right'>
+        <image class ="avatar           "src='https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJX9ErC7TNSiaseRhZLia8lXibdP5GOG0qDgjBjOkwNGIBAymL8hOI46wxnyXJM89Bl28ywrzRkJaRibQ/0'>
+        </image>
+      </view>
+      <view class='left'>
+        <view class='nick_name'>
+          <text >博.董</text>
+        </view>
+        <view class='time'>
+          <text >2018-01-12 12:30:25</text>
+        </view>
+        <view class='content'>
+          <text >这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片 </text>
+        </view>
+      </view>
+    </view>    
+     <view  class='comments' >
+      <view class='right'>
+        <image class ="avatar           "src='https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJX9ErC7TNSiaseRhZLia8lXibdP5GOG0qDgjBjOkwNGIBAymL8hOI46wxnyXJM89Bl28ywrzRkJaRibQ/0'>
+        </image>
+      </view>
+      <view class='left'>
+        <view class='nick_name'>
+          <text >博.董</text>
+        </view>
+        <view class='time'>
+          <text >2018-01-12 12:30:25</text>
+        </view>
+        <view class='content'>
+          <text >这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片 </text>
+        </view>
+      </view>
+    </view>     
+     <view  class='comments' >
+      <view class='right'>
+        <image class ="avatar           "src='https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJX9ErC7TNSiaseRhZLia8lXibdP5GOG0qDgjBjOkwNGIBAymL8hOI46wxnyXJM89Bl28ywrzRkJaRibQ/0'>
+        </image>
+      </view>
+      <view class='left'>
+        <view class='nick_name'>
+          <text >博.董</text>
+        </view>
+        <view class='time'>
+          <text >2018-01-12 12:30:25</text>
+        </view>
+        <view class='content'>
+          <text >这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片 </text>
+        </view>
+      </view>
+    </view>     
+     <view  class='comments' >
+      <view class='right'>
+        <image class ="avatar           "src='https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJX9ErC7TNSiaseRhZLia8lXibdP5GOG0qDgjBjOkwNGIBAymL8hOI46wxnyXJM89Bl28ywrzRkJaRibQ/0'>
+        </image>
+      </view>
+      <view class='left'>
+        <view class='nick_name'>
+          <text >博.董</text>
+        </view>
+        <view class='time'>
+          <text >2018-01-12 12:30:25</text>
+        </view>
+        <view class='content'>
+          <text >这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片 </text>
+        </view>
+      </view>
+    </view>     
+    <view  class='comments' >
+      <view class='right'>
+        <image class ="avatar           "src='https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEJX9ErC7TNSiaseRhZLia8lXibdP5GOG0qDgjBjOkwNGIBAymL8hOI46wxnyXJM89Bl28ywrzRkJaRibQ/0'>
+        </image>
+      </view>
+      <view class='left'>
+        <view class='nick_name'>
+          <text >博.董</text>
+        </view>
+        <view class='time'>
+          <text >2018-01-12 12:30:25</text>
+        </view>
+        <view class='content'>
+          <text >这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片这是一个不错的照片 </text>
+        </view>
+      </view>
+    </view>     
+  </view>
+
+</view> 
+

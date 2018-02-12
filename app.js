@@ -3,7 +3,8 @@ App({
 
   data:{
     appid: 'wx1560a57a16311b28',
-    appsecret: '6454674b9858b21834ae4bdf9d2204d7'
+    appsecret: '6454674b9858b21834ae4bdf9d2204d7',
+    domain:'http://172.22.34.34'
   },
   onLaunch: function () {
     // 展示本地存储能力
@@ -20,7 +21,6 @@ App({
         wx.request({
           url: 'https://api.weixin.qq.com/sns/jscode2session?appid=wx1560a57a16311b28&secret=6454674b9858b21834ae4bdf9d2204d7&js_code=' + code+'&grant_type=authorization_code',
           success: res =>{
-            debugger;
             console.log(res)
           }
         })
